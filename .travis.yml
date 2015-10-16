@@ -1,0 +1,22 @@
+deploy:
+  true:
+    condition: $TRAVIS_PYTHON_VERSION == '2.7'
+    repo: omarkhan/django-pg-array-lookups
+    tags: true
+  distributions: sdist bdist_wheel
+  password:
+    secure: x+ggOAfABzUiAO7N4eF79+/W8ecYXxebKEJW+J58nykFtNfqpHLzhvXk6KHqJb+vI83+KvVZoEi0ONvIDWdBijuAQ3GB11Va2FRdxQxgc8j5pwMUwZEgJTPIL8PHXGAawNwcIQp3M40i6KvpEb9VXRmW4I9kUOAT8dFZg/cphTc17t4WYuafZ2gwHWkER00jlPRbNCIYiF4OTWl0GcnNZlWkz0Clb9A0LL/u/gektB06Bmsw+HUkFmKS7jWLsozWXsWapBilJb/wvoZbsGh/3NyWgmtkaWtJjvoteMU9AtQgq8SrUB9qU+09uEQXProIBtA1hyBh4aWRF1e/VlRkv50BBby9emn+8GfRQ/9AAdEWf77nXiHultieK3lnlu+i7E/zpB7mrqW1DMRwiHXVYFaXlpigjTt2gwCiiHMRvXT4T3cMqvVZsOgWQ7zhs8goxmiHi6M40I6W9HVs8XFDpiqVzhLoKerywT1UITUHKIKTsWCrDdRKQqOugevtbL8BqVF9lr7rUU7n4acKZo4n2ewdLjEMFLjIInvSXZvWywOGAzUelST1SWHj65Xx7G15S9ixWp6rXarR4c1zQqfJXAfvmOrRrIjIYfob1slEgJx3RYSva5ddJrGkh+6s+BxDf8a2S50rfMM3jBqWPzfcE0wIwDRHKI4OyRJ1pa79PyE=
+  provider: pypi
+  user: omarkhan
+language: python
+python:
+  - '3.5'
+  - '3.4'
+  - '3.3'
+  - '2.7'
+install:
+  - pip install --upgrade pip
+  - pip install .
+script: python manage.py test
+addons:
+  postgresql: '9.4'

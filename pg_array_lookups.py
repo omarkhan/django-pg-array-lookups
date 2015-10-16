@@ -3,7 +3,7 @@ from django.db.models import Lookup, Transform
 
 __author__ = 'Omar Khan'
 __email__ = 'omar@omarkhan.me'
-__version__ = '0.1.0'
+__version__ = '0.1.1'
 
 
 @ArrayField.register_lookup

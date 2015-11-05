@@ -12,7 +12,7 @@ requirements = [
 
 setup(
     name='django-pg-array-lookups',
-    version='0.1.1',
+    version='0.2.0',
     description='ANY/ALL lookups for PostgreSQL arrays',
     long_description=long_description,
     author="Omar Khan",
